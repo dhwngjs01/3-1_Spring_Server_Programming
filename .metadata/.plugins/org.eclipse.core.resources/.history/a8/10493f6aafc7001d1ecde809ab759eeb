@@ -1,0 +1,18 @@
+package com.inhatc.cs;
+
+import org.springframework.web.bind.annotation.RequestMapping;
+
+public class CSController4 {
+	@RequestMapping("doF")
+	public String doF() {
+		System.out.println("doF Called~~~~~~~~~~~");
+		return "redirect:/doF";
+	}
+	
+	@RequestMapping("doG")
+	public String doG() {
+		System.out.println("doG Called~~~~~~~~~");
+		
+		return ""; 
+	}
+}
