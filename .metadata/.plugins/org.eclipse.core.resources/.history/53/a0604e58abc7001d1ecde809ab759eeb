@@ -1,0 +1,9 @@
+package com.inhatc.cs;
+
+@Controller
+public class CSController3 {
+	@RequestMapping("doD")
+	public String doB() {
+		return "doB";
+	}
+}

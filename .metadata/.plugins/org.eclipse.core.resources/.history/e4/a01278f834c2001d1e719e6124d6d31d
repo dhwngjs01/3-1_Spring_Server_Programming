@@ -1,0 +1,38 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ page session="false" contentType="text/html; charset=utf-8" %>
+<%@ page import="java.util.*" %>
+<html>
+<head>
+	<title>lotto</title>
+</head>
+<body>
+	<%
+		Random r = new Random();
+	
+		int lottoLen = 6;
+		int[] lottoArr = new int[lottoLen];
+		
+		int lottoNum = r.nextInt(45) + 1;
+		
+		
+		int i = 0;
+		while(true){
+			lottoArr[i] = lottoNum;
+			
+			for(int j = 0; j < i; i ++){
+				if(lottoArr[j] == lottoNum)
+			}
+			
+			if(lottoLen.length == 6){
+				break;
+			}
+		}
+		
+		for(int i = 0; i < lottoArr.length; i++){
+			out.print(lottoArr[i] + "<br>");
+		}
+		
+		
+	%>
+</body>
+</html>

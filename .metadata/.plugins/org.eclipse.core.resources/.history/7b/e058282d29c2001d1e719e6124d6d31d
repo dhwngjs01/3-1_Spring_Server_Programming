@@ -1,0 +1,17 @@
+package com.inhatc.cs;
+
+/**
+ * Handles requests for the application home page.
+ */
+@Controller
+public class HomeController {
+	
+	/**
+	 * Simply selects the home view to render by returning its name.
+	 */
+	@RequestMapping(value = "/1to10", method=RequestMethod.GET)
+	public String onetoten() {
+		return "onetoten";
+	}
+	
+}
