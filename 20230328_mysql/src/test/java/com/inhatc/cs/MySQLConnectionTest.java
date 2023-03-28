@@ -14,7 +14,6 @@ public class MySQLConnectionTest {
 	private static final String USER = "root";
 	private static final String PW = "inhatc";
 	
-	
 	@Test
 	public void testConnection() throws Exception {
 		Class.forName(DRIVER);
