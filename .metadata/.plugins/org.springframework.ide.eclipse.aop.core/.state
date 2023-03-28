@@ -2,5 +2,6 @@
 <aop-reference-model>
 <aop-project name="20230307_Hello"/>
 <aop-project name="20230314_1to10"/>
+<aop-project name="20230328_mysql"/>
 <aop-project name="20230321_Controller"/>
 </aop-reference-model>
