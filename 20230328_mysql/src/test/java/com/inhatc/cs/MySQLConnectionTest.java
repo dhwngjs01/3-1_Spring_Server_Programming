@@ -11,8 +11,8 @@ public class MySQLConnectionTest {
 	
 	// 127.0.0.1 means localhost / loopback address
 	private static final String URL = "jdbc:mysql://127.0.0.1:3306/basicboard?serverTimezone=UTC&characterEncoding=UTF-8&useSSL=false";
-	private static final String USER = "root";
-	private static final String PW = "inhatc";
+	private static final String USER = "spring";
+	private static final String PW = "spring";
 	
 	@Test
 	public void testConnection() throws Exception {
