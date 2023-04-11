@@ -30,6 +30,7 @@
 	</section>
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
+			<item value="C:\Users\user\Documents\Server Programming Workspace\20230411_Subject_Record"/>
 			<item value="C:\Users\user\Documents\Server Programming Workspace"/>
 		</list>
 		<list key="projectNameTemplate">

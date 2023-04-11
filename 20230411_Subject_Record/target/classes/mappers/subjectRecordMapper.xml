@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.inhatc.mapper.SubjectRecordMapper">
+	<insert id="insertSubjectRecord">
+		insert into tbl_sbjrecord(student_no, korean, english, math) values (#{studentNo}, #{korean}, #{english}, #{math})
+	</insert>
+
+	<select id="selectSubjectRecord" resultType="com.inhatc.domain.SubjectRecordVO">
+		select * from tbl_sbjrecord where student_no = #{studentNo}
+	</select>
+	
+	<select id="selectAllSubjectRecord" resultType="com.inhatc.domain.SubjectRecordVO">
+		<![CDATA[
+			select * from tbl_sbjrecord order by student_no
+		]]>
+		
+	</select>
+</mapper>

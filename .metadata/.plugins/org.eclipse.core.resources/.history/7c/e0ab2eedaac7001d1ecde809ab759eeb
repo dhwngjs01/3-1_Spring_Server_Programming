@@ -1,8 +1,0 @@
-package com.inhatc.domain;
-
-public class ProductVO {
-	private String name;
-	private double price;
-	
-	
-}
