@@ -8,9 +8,7 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.web.WebAppConfiguration;
 
-import com.inhatc.domain.MembersVO;
 import com.inhatc.domain.SubjectRecordVO;
-import com.inhatc.persistence.MembersDAO;
 import com.inhatc.persistence.SubjectRecordDAO;
 
 @WebAppConfiguration

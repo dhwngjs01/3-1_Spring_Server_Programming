@@ -16,6 +16,13 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		<![CDATA[
 			select * from tbl_sbjrecord order by student_no
 		]]>
-		
 	</select>
+	
+	<update id="updateSubjectRecord">
+		update tbl_sbjrecord set korean = #{korean}, english = #{english}, math = #{math} where student_no = #{studentNo}
+	</update>
+	
+	<delete id="deleteSubjectRecord">
+		delete from tbl_sbjrecord where student_no = #{studentNo}
+	</delete>
 </mapper>

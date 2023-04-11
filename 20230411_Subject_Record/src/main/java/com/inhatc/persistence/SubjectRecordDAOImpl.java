@@ -33,13 +33,12 @@ public class SubjectRecordDAOImpl implements SubjectRecordDAO {
 
 	@Override
 	public void updateSubjectRecord(SubjectRecordVO vo) {
-		// TODO Auto-generated method stub
-		
+		sqlSession.update(namespace + ".updateSubjectRecord", vo);
 	}
 
 	@Override
 	public void deleteSubjectReocrd(int studentNo) {
-		// TODO Auto-generated method stub
+		sqlSession.delete(namespace + ".deleteSubjectRecord", studentNo);
 		
 	}
 	
