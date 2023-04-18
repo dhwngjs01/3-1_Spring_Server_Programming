@@ -1,0 +1,16 @@
+package com.inhatc.persistence;
+
+import java.util.List;
+
+import com.inhatc.domain.MembersVO;
+
+public interface MembersDAO {
+	public String getTime();
+	public void insertMembers(MembersVO vo) throws Exception;
+	public MembersVO readMembers(String userid) throws Exception;
+	public MembersVO readWithPW(String userid, String userpw) throws Exception;
+	public void modify(MembersVO vo) throws Exception;
+	public void delete(String userid) throws Exception;
+	
+	public List<MembersVO> membersList() throws Exception;
+}
