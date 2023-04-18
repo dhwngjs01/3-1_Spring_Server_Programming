@@ -32,6 +32,6 @@ public class StudentInfoDAO3UpdateTest {
 		vo.setStudentAddress("인천광역시 용현동 33-22");
 		vo.setStudentPhone("010-7777-8888");
 		vo.setStudentEmail("ohDdoo@itc.ac.kr");
-		dao.updateStudentInfo(vo);		
+		dao.updateStudentInfo(vo);
 	}
 }

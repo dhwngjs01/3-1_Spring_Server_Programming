@@ -7,6 +7,7 @@ public class StudentInfoVO {
 	private String student_address;
 	private String student_phone;
 	private String student_email;
+	
 	public String getStudentNo() {
 		return student_no;
 	}

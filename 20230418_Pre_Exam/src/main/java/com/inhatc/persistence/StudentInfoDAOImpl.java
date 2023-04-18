@@ -23,6 +23,7 @@ public class StudentInfoDAOImpl implements StudentInfoDAO {
 
 	@Override
 	public StudentInfoVO readStudentInfo(String studentNo) {
+		System.out.println(sqlSession.selectOne(namespace + ".selectStudentInfo", studentNo));
 		return sqlSession.selectOne(namespace + ".selectStudentInfo", studentNo);
 	}
 
