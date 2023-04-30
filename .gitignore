@@ -1,4 +1,9 @@
 /.metadata/
+<<<<<<< HEAD
 /Spring_Motorcycle_BBS
 .gitignore
 /job
+=======
+/Spring_Motorcycle_BBS/
+>>>>>>> parent of 98924aa (delete .gitignore)
+sync.ffs_db
