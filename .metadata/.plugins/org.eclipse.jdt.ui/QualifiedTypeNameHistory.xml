@@ -34,4 +34,6 @@
     <fullyQualifiedTypeName name="java.lang.System"/>
     <fullyQualifiedTypeName name="com.inhatc.domain.StudentInfoVO"/>
     <fullyQualifiedTypeName name="com.inhatc.persistence.StudentInfoDAO"/>
+    <fullyQualifiedTypeName name="com.inhatc.persistence.LabmasterDAO"/>
+    <fullyQualifiedTypeName name="com.inhatc.domain.LabmasterVO"/>
 </qualifiedTypeNameHistroy>

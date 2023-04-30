@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.inhatc.mapper.Labmaster201844021Mapper">
+	<insert id="insertLabmaster">
+		insert into tbl_201844021_lab_master(lab_id, lab_name, lab_able_number, lab_location, lab_class, lab_manage_dept) values (#{labId}, #{labName}, #{labAbleNumber}, #{labLocation}, #{labClass}, #{labManageDept})
+	</insert>
+
+	<select id="selectLabmaster" resultType="com.inhatc.domain.LabmasterVO">
+		select * from tbl_201844021_lab_master where lab_id = #{labId}
+	</select>
+	
+	<select id="selectAllLabmaster" resultType="com.inhatc.domain.LabmasterVO">
+		<![CDATA[
+			select * from tbl_201844021_lab_master
+		]]>
+	</select>
+	
+	<update id="updateLabmaster">
+		update tbl_201844021_lab_master set lab_name = #{labName}, lab_able_number = #{labAbleNumber}, lab_location = #{labLocation}, lab_class = #{labClass}, lab_manage_dept = #{labManageDept} where lab_id = #{labId}
+	</update>
+	
+	<delete id="deleteLabmaster">
+		delete from tbl_201844021_lab_master where lab_id = #{labId}
+	</delete>
+</mapper>
