@@ -1,0 +1,30 @@
+		POM.xml 5W
+		
+		
+		<properties>
+		<java-version>1.8</java-version>
+		<org.springframework-version>4.1.7.RELEASE</org.springframework-version>
+		<org.aspectj-version>1.6.10</org.aspectj-version>
+		<org.slf4j-version>1.6.6</org.slf4j-version>
+		                                                               </properties>
+	
+	
+	
+		<!-- Servlet -->
+		<!-- <dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>servlet-api</artifactId>
+			<version>2.5</version>
+			<scope>provided</scope>
+		</dependency> -->
+		
+		<!-- Servlet 버전 변경 23/03/28-->
+		<dependency>
+		    <groupId>javax.servlet</groupId>
+		    <artifactId>javax.servlet-api</artifactId>
+		    <version>4.0.1</version>
+		    <scope>provided</scope>
+		</dependency>
+		
+		
+		provided-> 의존관계 DK나 컨테이너에 대해서 적용

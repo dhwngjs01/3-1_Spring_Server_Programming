@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.inhatc.mapper.SubjectRecordMapper">
+
+	<select id="getTime" resultType="string">
+		select now()
+	</select>
+	
+	<insert id="insertSubjectRecord">
+		insert into tbl_sbjrecord ( hakbun, kor, math, eng) values
+		( #{hakbun}, #{kor}, #{math}, #{eng})
+	</insert>
+	
+	
+	<select id="selectSubjectRecord" resultType="com.inhatc.domain.SubjectRecordVO">
+		select * from tbl_sbjrecord 
+		where hakbun = #{hakbun}
+	</select>
+	
+	
+	 <update id="update">
+	 update tbl_sbjrecord set kor =#{kor}, math =#{math}, eng =#{eng}
+	 where hakbun = #{hakbun}
+	 </update>
+	
+	 <delete id="delete">
+	 delete from tbl_sbjrecord where hakbun = #{hakbun}
+	 </delete>
+	
+	 <select id="listAll" resultType="com.inhatc.domain.SubjectRecordVO">
+		 <![CDATA[
+		 select 
+		   hakbun, kor, math, eng
+		 from 
+		   tbl_sbjrecord 
+		 order by hakbun asc
+		 ]]>  
+	  </select>
+
+</mapper>
