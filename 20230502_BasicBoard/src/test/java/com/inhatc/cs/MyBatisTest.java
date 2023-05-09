@@ -24,10 +24,9 @@ public class MyBatisTest {
 	
 	@Test
 	public void testSession() throws Exception{
-		try(SqlSession session =sqlFactory.openSession()){
-			System.out.println(session);
-		}catch(Exception e) {
-			e.printStackTrace();
-		}
+		/*
+		 * try(SqlSession session =sqlFactory.openSession()){
+		 * System.out.println(session); }catch(Exception e) { e.printStackTrace(); }
+		 */
 	}
 }

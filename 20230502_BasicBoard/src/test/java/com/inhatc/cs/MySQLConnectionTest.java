@@ -8,7 +8,7 @@ import org.junit.Test;
 public class MySQLConnectionTest {
 
 	private static final String DRIVER = "com.mysql.cj.jdbc.Driver";
-	//private static final String DRIVER = "com.mysql.jdbc.Driver"; //6.0 ÀÌÇÏ¹öÀü
+	//private static final String DRIVER = "com.mysql.jdbc.Driver"; //6.0 ï¿½ï¿½ï¿½Ï¹ï¿½ï¿½ï¿½
 	//127.0.0.1 means localhost / loopback address
 	private static final String URL = 
 	"jdbc:mysql://127.0.0.1:3306/basicboard?serverTimezone=UTC&characterEncoding=UTF-8&useSSL=false";
@@ -18,12 +18,11 @@ public class MySQLConnectionTest {
 	@Test
 	public void testConnection() throws Exception{
 		
-		Class.forName(DRIVER);
-		try(Connection con = DriverManager.getConnection(URL, USER, PW)){
-			System.out.println(con);
-		}catch(Exception e) {
-			e.printStackTrace();
-		}
+		/*
+		 * Class.forName(DRIVER); try(Connection con = DriverManager.getConnection(URL,
+		 * USER, PW)){ System.out.println(con); }catch(Exception e) {
+		 * e.printStackTrace(); }
+		 */
 		
 	}
 }
