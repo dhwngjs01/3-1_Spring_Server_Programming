@@ -367,13 +367,13 @@
             </li>
             <li class="treeview active">
               <a href="#">
-                <i class="fa fa-edit"></i> <span>Forms</span>
+                <i class="fa fa-edit"></i> <span>게시판</span>
                 <i class="fa fa-angle-left pull-right"></i>
               </a>
               <ul class="treeview-menu">
-                <li class="active"><a href="general.html"><i class="fa fa-circle-o"></i> General Elements</a></li>
-                <li><a href="advanced.html"><i class="fa fa-circle-o"></i> Advanced Elements</a></li>
-                <li><a href="editors.html"><i class="fa fa-circle-o"></i> Editors</a></li>
+                <li><a href="/board/listAll"><i class="fa fa-circle-o"></i> 게시글 목록</a></li>
+                <li><a href="/board/read"><i class="fa fa-circle-o"></i> Advanced Elements</a></li>
+                <li><a href="/board/register"><i class="fa fa-circle-o"></i> 게시글 작성</a></li>
               </ul>
             </li>
             <li class="treeview">

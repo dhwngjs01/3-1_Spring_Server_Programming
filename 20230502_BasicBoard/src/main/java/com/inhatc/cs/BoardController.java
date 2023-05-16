@@ -6,6 +6,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.inhatc.domain.BoardVO;
 import com.inhatc.service.BoardService;
@@ -24,7 +26,7 @@ public class BoardController {
 	}
 	
 	@RequestMapping(value="/register", method=RequestMethod.POST)
-	public String registerPost(BoardVO board, Model model) throws Exception {
+	public String registerPost(BoardVO board, RedirectAttributes rttr) throws Exception {
 		System.out.println("Register (POST) Called");
 		
 		System.out.println("제목 : " + board.getTitle());
@@ -33,6 +35,24 @@ public class BoardController {
 		
 		service.regist(board);
 		
-		return "home";
+		return "redirect:/board/listAll";
+	}
+	
+	@RequestMapping(value="/listAll", method=RequestMethod.GET)
+	public String listAll(Model model) throws Exception {
+		System.out.println("Called listAll page (GET)");
+		
+		model.addAttribute("list", service.listAll());
+		
+		return "board/listAll2";
+	}
+	
+	@RequestMapping(value="/read", method=RequestMethod.GET)
+	public String read(@RequestParam("bno") int bno, Model model) throws Exception{
+		System.out.println("Called read page (GET)");
+
+		model.addAttribute(service.read(bno));
+		
+		return "board/read2";
 	}
 }
