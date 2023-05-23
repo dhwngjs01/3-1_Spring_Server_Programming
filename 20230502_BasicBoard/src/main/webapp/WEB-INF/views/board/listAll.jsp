@@ -6,58 +6,52 @@
 
 <%@include file="../include/header.jsp"%>
 
-<!-- Main content -->
-<section class="content">
-	<div class="row">
-		<!-- left column -->
-		<div class="col-md-12">
-			<!-- general form elements -->
-			<div class="box">
-				<div class="box-header with-border">
-					<h3 class="box-title">LIST ALL PAGE</h3>
-				</div>
-				<div class="box-body">
-				
-					<table class="table table-bordered">
-						<tr>
-							<th style="width: 10px">BNO</th>
-							<th>TITLE</th>
-							<th>WRITER</th>
-							<th>REGDATE</th>
-							<th style="width: 40px">VIEWCNT</th>
-						</tr>
-						<c:forEach items="${list}" var="boardVO">
+		<style>
+			.row {
+				display:flex;
+				justify-content:center;
+				margin-top:5rem;
+			}
+			
+			.table thead tr th {
+				font-size:2.2rem;
+			}
+			
+			.table tbody tr td {
+				font-size:2rem;
+			}
+		</style>
+
+		<div class="box">
+			<h1 class="text-center">게시글 목록</h1>
+			<div class="row">
+				<div class="col-md-8">
+					<table class="table text-center">
+						<thead>
 							<tr>
-								<td>${boardVO.bno}</td>
-								<td><a href='/board/read?bno=${boardVO.bno}'>${boardVO.title}</a></td>
-								<td>${boardVO.writer}</td>
-								<td><fmt:formatDate pattern="yyyy-MM-dd HH:mm"
-										value="${boardVO.regdate}" /></td>
-								<td><span class="badge bg-red">${boardVO.viewcnt }</span></td>
+								<th>BNO</th>
+								<th>제 목</th>
+								<th>글쓴이</th>
+								<th>등록시간</th>
+								<th>조회수</th>
 							</tr>
-						</c:forEach>
+						</thead>
+						<tbody>
+							<c:forEach items="${list}" var="boardVO">
+								<tr>
+									<td>${boardVO.bno}</td>
+									<td><a href="/board/read?bno=${boardVO.bno} ">${boardVO.title}</a></td>
+									<td>${boardVO.content}</td>
+									<td><fmt:formatDate pattern="yyyy-MM-dd HH:mm" value="${boardVO.regdate}" /></td>
+									<td>${boardVO.viewcnt}</td>
+								</tr>
+							</c:forEach>
+						</tbody>
 					</table>
-				</div>
-				<!-- /.box-body -->
-				<div class="box-footer">Footer</div>
-				<!-- /.box-footer-->
+				</div>			
 			</div>
 		</div>
-		<!--/.col (left) -->
+		
+	<!-- // content-wrapper -->
 	</div>
-	<!-- /.row -->
-</section>
-<!-- /.content -->
-</div>
-<!-- /.content-wrapper -->
-
-<script>
-    
-    var result = '${msg}';    
-    if(result == 'SUCCESS'){
-    	alert("처리가 완료되었습니다.");
-    }
-    
-    </script>
-
 <%@include file="../include/footer.jsp"%>

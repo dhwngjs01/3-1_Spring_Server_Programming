@@ -44,9 +44,9 @@
 				<!-- /.box-body -->
 				
 				<div class="box-footer text-right">
-					<button type="submit" class="btn btn-warning">수정</button>
-					<button type="submit" class="btn btn-danger">삭제</button>
-					<button type="submit" class="btn btn-primary">목록</button>
+					<a href="/board/modify?bno=${boardVO.bno}" class="btn btn-warning">수정</a>
+					<a href="/board/remove?bno=${boardVO.bno}" class="btn btn-danger">삭제</a>
+					<a href="/board/listAll" class="btn btn-primary">목록</a>
 				</div>
 
 

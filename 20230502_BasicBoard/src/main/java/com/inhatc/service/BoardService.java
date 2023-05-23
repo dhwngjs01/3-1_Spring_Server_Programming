@@ -2,10 +2,8 @@ package com.inhatc.service;
 
 import java.util.List;
 
-import javax.inject.Inject;
-
 import com.inhatc.domain.BoardVO;
-import com.inhatc.persistence.BoardDAO;
+import com.inhatc.domain.Criteria;
 
 public interface BoardService {	
 	public void regist(BoardVO board) throws Exception;
@@ -13,4 +11,6 @@ public interface BoardService {
 	public void modify(BoardVO board) throws Exception;
 	public void remove(int bno) throws Exception;
 	public List<BoardVO> listAll() throws Exception;
+	public List<BoardVO> listPage(int page) throws Exception;
+	public List<BoardVO> listCriteria(Criteria cri) throws Exception;
 }

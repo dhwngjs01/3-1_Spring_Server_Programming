@@ -7,6 +7,7 @@ import javax.inject.Inject;
 import org.springframework.stereotype.Service;
 
 import com.inhatc.domain.BoardVO;
+import com.inhatc.domain.Criteria;
 import com.inhatc.persistence.BoardDAO;
 
 @Service
@@ -15,8 +16,8 @@ public class BoardServiceImpl implements BoardService {
 	private BoardDAO dao;
 	
 	@Override
-	public void regist(BoardVO board) throws Exception {
-		dao.create(board);
+	public void regist(BoardVO vo) throws Exception {
+		dao.create(vo);
 	}
 
 	@Override
@@ -25,8 +26,8 @@ public class BoardServiceImpl implements BoardService {
 	}
 
 	@Override
-	public void modify(BoardVO board) throws Exception {
-		dao.update(board);
+	public void modify(BoardVO vo) throws Exception {
+		dao.update(vo);
 	}
 
 	@Override
@@ -37,5 +38,17 @@ public class BoardServiceImpl implements BoardService {
 	@Override
 	public List<BoardVO> listAll() throws Exception {
 		return dao.listAll();
+	}
+
+	@Override
+	public List<BoardVO> listPage(int page) throws Exception {
+		
+		
+		return dao.listPage(page);
+	}
+
+	@Override
+	public List<BoardVO> listCriteria(Criteria cri) throws Exception {
+		return dao.listCriteria(cri);
 	}
 }

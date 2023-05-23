@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.inhatc</groupId>
 	<artifactId>cs</artifactId>
-	<name>201844021_OhJuheon</name>
+	<name>20230420_Mid_Exam</name>
 	<packaging>war</packaging>
 	<version>1.0.0-BUILD-SNAPSHOT</version>
 	<properties>

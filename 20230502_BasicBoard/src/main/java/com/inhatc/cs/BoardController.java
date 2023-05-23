@@ -4,12 +4,14 @@ import javax.inject.Inject;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.inhatc.domain.BoardVO;
+import com.inhatc.domain.Criteria;
 import com.inhatc.service.BoardService;
 
 @Controller
@@ -44,7 +46,7 @@ public class BoardController {
 		
 		model.addAttribute("list", service.listAll());
 		
-		return "board/listAll2";
+		return "board/listAll";
 	}
 	
 	@RequestMapping(value="/read", method=RequestMethod.GET)
@@ -53,6 +55,56 @@ public class BoardController {
 
 		model.addAttribute(service.read(bno));
 		
-		return "board/read2";
+		return "board/read";
+	}
+	
+	@RequestMapping(value="/modify", method=RequestMethod.GET)
+	public String modify(@RequestParam("bno") int bno, Model model) throws Exception {
+		System.out.println("Called modify page (GET)");
+		
+		model.addAttribute(service.read(bno));
+		
+		return "board/modify";
+	}
+	
+	@RequestMapping(value="/modify", method=RequestMethod.POST)
+	public String modifyPost(BoardVO vo, RedirectAttributes rttr) throws Exception {
+		System.out.println("Called Modify Page (POST)");
+		
+		System.out.println("bno : " + vo.getBno());
+		System.out.println("title : " + vo.getTitle());
+		System.out.println("content : " + vo.getContent());
+		System.out.println("writer : " + vo.getWriter());
+		
+		service.modify(vo);
+		
+		return "redirect:/board/read?bno=" + vo.getBno();
+	}
+	
+	@RequestMapping(value="/remove", method=RequestMethod.GET)
+	public String remove(@RequestParam("bno") int bno, RedirectAttributes rttr) throws Exception {
+		System.out.println("Called Board Remove (GET)");
+		
+		service.remove(bno);
+		
+		return "redirect:/board/listAll";
+	}
+	
+	@RequestMapping(value="/listPage", method=RequestMethod.GET)
+	public String listAll(@RequestParam(value="page", required=false, defaultValue="1") int page, Model model) throws Exception {
+		System.out.println("Called listPage page (GET)");
+		
+		model.addAttribute("list", service.listPage(page));
+		
+		return "board/listAll";
+	}
+	
+	@RequestMapping(value="/listCriteria", method=RequestMethod.GET)
+	public String listAll(Criteria cri, Model model) throws Exception {
+		System.out.println("Called listCriteria page (GET)");
+		
+		model.addAttribute("list", service.listCriteria(cri));
+		
+		return "board/listAll";
 	}
 }

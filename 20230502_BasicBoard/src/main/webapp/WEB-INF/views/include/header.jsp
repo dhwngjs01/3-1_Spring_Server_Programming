@@ -372,7 +372,8 @@
               </a>
               <ul class="treeview-menu">
                 <li><a href="/board/listAll"><i class="fa fa-circle-o"></i> 게시글 목록</a></li>
-                <li><a href="/board/read"><i class="fa fa-circle-o"></i> Advanced Elements</a></li>
+                <li><a href="/board/listPage"><i class="fa fa-circle-o"></i> 게시글 목록(페이징)</a></li>
+                <li><a href="/board/listCriteria"><i class="fa fa-circle-o"></i> 게시글 목록(Criteria)</a></li>
                 <li><a href="/board/register"><i class="fa fa-circle-o"></i> 게시글 작성</a></li>
               </ul>
             </li>
